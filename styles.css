@@ -1,0 +1,128 @@
+:root{
+    --myfont: 'Montserrat', sans-serif;
+    --my-btn-font: 'Mulish', sans-serif;
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,116,177,1) 28%, rgba(0,206,255,1) 75%); */
+}
+body{
+    background-image: url(images/images.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--myfont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 97vw;
+    
+}
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+    overflow: hidden;
+    width: calc(100vw - 45vw);;
+    max-width: 100%;
+   
+}
+.header{
+    background: var(--myfont);
+    padding: 5px 0;
+    border-radius: 10px;
+    background: rgb(53,182,227);
+    background: linear-gradient(90deg, rgba(53,182,227,1) 18%, rgba(217,29,253,1) 68%, rgba(170,189,106,1) 100%); 
+} 
+ .header h2 {
+    color: #222;
+    font-family: var(--my-btn-font);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form{
+    padding: 3em;
+}
+.form-control{
+    margin-bottom: 1em;
+    position: relative;
+}
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    padding: 12px;
+    
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+.form-control.success input {
+    border-color: #2ecc71;
+}
+.form-control.error input {
+    border-color: #e74c3c;
+}
+.form-control i{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    visibility: hidden;
+}
+.form-control.success i.fa-circle-check{
+    color: #2ecc71;
+    visibility: visible;
+} 
+.form-control.error i.fa-circle-exclamation{
+    color: #e74c3c;
+    visibility: visible;
+} 
+.form-control small{
+    position: absolute;
+    color: #e74c3c;
+    left: 0;
+    
+    visibility: hidden;
+}
+.form-control.error small{
+
+    visibility: visible;
+}
+.form .btn{
+    background: rgb(53,182,227);
+    background: linear-gradient(90deg, rgba(53,182,227,1) 18%, rgba(217,29,253,1) 68%, rgba(170,189,106,1) 100%); 
+    border: none;
+    outline: none;
+    color: #fff;
+    display: inline;
+    margin-left: 25%;
+    border-radius: 25px;
+    font-family: var(--myfont);
+    font-size: 16px;
+    width: 50%;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+.form btn:hover{
+    background: rgb(53,182,227);
+    background: linear-gradient(90deg, rgba(53,182,227,1) 24%, rgba(217,29,253,1) 65%, rgba(106,189,178,1) 95%);
+}
+
+@media (max-width: 998px) {
+    .container{
+        width: calc(100vw - 35vw);
+        max-width: 100%;
+       
+    }
+}
+/* .form-group{
+    margin-bottom: 1em;
+    position: relative;
+} */

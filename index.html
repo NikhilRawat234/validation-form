@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font-family link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap" rel="stylesheet">
+   
+  </head>
+<body>
+    <div class="container" >
+        <div class="header" >
+            <h2>Registration-Form</h2>
+        </div>
+        <form class="form" id="form" >
+            <div class="form-control">
+                <label>First Name:</label>
+                <input type="text" name="" id="fname" placeholder="Enter your First Name" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msg</small>
+            </div>
+            <div class="form-control">
+                <label>Last Name:</label>
+                <input type="text" name="" id="lname" placeholder="Enter your last Name" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div class="form-control">
+                <label>Full Name:</label>
+                <input type="text" name="" id="fullname" placeholder="Enter your Full Name" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div class="form-control">
+                <label>Email:</label>
+                <input type="email" name="" id="email" placeholder="Example@gmail.com" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div>
+                <label for="country-select">Country:</label>
+                <select name="country-select" id="country-select">
+                  <option value="ind" selected>India</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">UK</option>
+                  <option value="china">China</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                </select>
+                <span id="country-code">+91</span>
+                
+              </div>
+            <div class="form-control">
+                <label>Mobile Number:</label>
+                <input type="number" name="" id="phone" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div class="form-control">
+                <label>DOB:-</label>
+                <input type="date" name="mydate" min="1923-03-03" max="2023-03-06" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div class="form-control">
+                <label>Password:</label>
+                <input type="Password" name="" id="password" placeholder="Password" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Msgs</small>
+
+            </div>
+            <div class="form-control">
+                <label>Confirm Password:</label>
+                <input type="Password" name="" id="cpassword" placeholder="Re-Enter Password" autocomplete="off">
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <small>Error Message</small>
+
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Photo:</label>
+                <input type="file" id="image" name="image" accept="image/*" autocomplete="off"> 
+                <br>
+                <input type="submit" value="Upload">
+              </div>
+      
+              <div class="form-group">
+                <label for="document">Upload CV:</label>
+                <input type="file" id="document" name="document" accept=".doc,.docx,.pdf" >
+                <br>
+                <input type="submit" value="Upload">
+              </div>
+      
+              <div class="form-group">
+                <label for="about">About Yourself:</label>
+                <textarea id="about" class="form-control" name="about"  cols="90" rows="10"
+                  placeholder="Enter About Yourself..." required autocomplete="off"></textarea>
+                <span class="error-message" id="about-error"></span>
+              </div>
+      
+              <div class="form-group">
+                <label>Are you eligible: </label>
+                <input type="checkbox" name="myeligible" id="myeligible" autocomplete="off">
+                <span class="error-message" id="myeligible-error"></span>
+              </div>
+      
+              <div class="form-group">
+                <label>Gender: Male</label>
+                <input type="radio" name="mygender" id="mygender" autocomplete="off">
+                <label>Female</label>
+                <input type="radio" name="mygender" id="mygender" autocomplete="off">
+                <label>Other</label>
+                <input type="radio" name="mygender" id="mygender" autocomplete="off">
+                <span class="error-message" id="mygender-error"></span>
+              </div>
+
+              <button type="submit" name="submit" value="submit" class="btn btn-success">Submit</button>
+              <button type="reset" name="submit" value="submit" class="btn btn-success">Reset</button>
+              
+              
+        </form>
+    </div>
+    <script>
+      const form      = document.getElementById('form');
+      const fnameInput  = document.getElementById('fname');
+      const lnameInput    = dcocument.getElementById('lname');
+      const fullnameInput  = document.getElementById('fullname');
+      const emailInput    = dcocument.getElementById('email');
+      const phoneInput     = dcocument.getElementById('phone');
+      const passwordInput  = document.getElementById('password');
+      const cpasswordInput = document.getElementById('cpassword');
+      const imageInput     = document.getElementById('image');
+      const documentInput  = document.getElementById('document');
+      const aboutInput     = document.getElementById('about');
+
+      // for showing error or successMsg
+
+      function showError(input, errormsgs){
+      const formcontrol = input.parentElement;
+      const small = formcontrol.querySelector('small');
+      formControl.className = "form-control error" ;
+      small.innerText = errormsgs;
+      }
+
+      function showError(input){
+        const formControl = input.parentElement;
+        formControl.className = "form-control success";
+      }
+     // add-events
+
+     form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      validatefName();
+      validatelName();
+      validateEmail();
+      validatePassword();
+      validatecPassword();
+      validateNumber();
+      validateAbout();
+     })
+          fnameInput.addEventListener('input', validatefName, updateFullName);
+          lnameInput.addEventListener('input', validatelName, updateFullName);
+          emailInput.addEventListener('input', validateEmail);
+          passwordInput.addEventListener('input', validatePassword);
+          cpasswordInput.addEventListener('input', validatecPassword);
+          numberInput.addEventListener('input', validateNumber);
+
+          // after successfully register the page
+          aboutInput.addEventListener('input', validateAbout);
+     const sendData = (fnameVal, sRate, count ) => {
+      if(sRate === count) {
+        alert('registration is successful');
+        swal("Welcome! " + fnameVal, "Registration Successful", "success");
+        location.href = 'demo.html?fname = ${fnameval}'
+      }
+     }
+    //  final data validation
+
+    //  const successMsg = (fnameVal) => {
+    //   let formCon = document.getElementsByClassName('form-control');
+    //   var count = formCon.length - 1;
+    //   for(var i = 0; i < formCon.length; i++){
+    //     var sRate = 0 + i;
+    //     console.log(sRate);
+    //     sendData(fnameVal, sRate, count);
+    //   }else {
+    //     return false;
+    //   }
+    //  }
+
+    
+      // more email validate
+
+      const countrySelect = document.getElementById('country-select');
+    const countryCode = document.getElementById('country-code');
+
+    countrySelect.addEventListener('change', () => {
+      const selectedCountry = countrySelect.value;
+      if (selectedCountry === 'ind') {
+        countryCode.textContent = '+91';
+      } else if (selectedCountry === 'usa') {
+        countryCode.textContent = '+1';
+      } else if (selectedCountry === 'uk') {
+        countryCode.textContent = '+44';
+      } else if (selectedCountry === 'china') {
+        countryCode.textContent = '+86';
+      } else if (selectedCountry === 'Australia') {
+        countryCode.textContent = '+61';
+      } else if (selectedCountry === 'Canada') {
+        countryCode.textContent = '+1';
+      }
+      
+      // add more conditions for other countries
+    });
+
+    function enableCapsLock(event) {
+      const key = event.key;
+      if (key.length === 1 && /^[a-zA-Z]+$/.test(key)) {
+        event.preventDefault();
+        if (!event.getModifierState('CapsLock')) {
+          document.execCommand('CapsLock');
+        }
+        document.execCommand('insertText', false, key.toUpperCase());
+      }
+
+    }
+
+    function validatefName() {
+      const value = fnameInput.value.trim();
+      if (value === '') {
+        showError(fnameInput, 'First Name is required');
+
+      }
+      else if (!isNaN(value[0])) {
+        showError(fnameInput, 'First letter should be not be number');
+      } else if (value[0] != value[0].toUpperCase()) {
+        showError(fnameInput, 'First letter should be capital');
+      } else if (!/^(?!.*(\w)\1\1)[\w\d]+$/.test(value)) {
+        showError(fnameInput, 'You can not use one character more than 2 times');
+      } else if (!/^[A-Za-z0-9]+$/.test(value)) {
+        showError(fnameInput, 'First Name is invalid');
+      } else if (value.length < 2) {
+        showError(fnameInput, 'first name contain atleast three character');
+      } else if (value.length > 50) {
+        showError(fnameInput, 'first name contain atmost fifty character');
+      } else {
+        hideError(fnameInput);
+      }
+    }
+
+    function validatelName() {
+      const value = lnameInput.value.trim();
+      if (value === '') {
+        showError(lnameInput, 'Last Name is required');
+      } else if (!isNaN(value[0])) {
+        showError(lnameInput, 'First letter should not be number');
+      } else if (/(\S)(\1{2,})/gi.test(value)) {
+        showError(lnameInput, 'You can not use one character more than 2 times');
+      } else if (!/^[A-Za-z.]+(?: [A-Za-z.]+)?(?= *(?!\S{2}))+(?: [A-Za-z.]+)?(?= *(?!\S{2}))?(?: \.[A-Za-z. ]+)?$/.test(value)) {
+        showError(lnameInput, 'Last Name is invalid');
+      } else if (value.length > 50) {
+        showError(lnameInput, 'first name contain atmost fifty character');
+      } else {
+        hideError(lnameInput);
+      }
+    }
+
+
+    fnameInput.addEventListener('input', updateFullName);
+    lnameInput.addEventListener('input', updateFullName);
+
+    function updateFullName() {
+      fullnameInput.value = fnameInput.value + ' ' + lnameInput.value;
+    }
+
+    function validateEmail() {
+      const value = emailInput.value.trim();
+      if (value === '') {
+        showError(emailInput, 'Email is required');
+      } else if (value[0] == "@" || value[0] == "#" || value[0] == "$" || value[0] == "%" || value[0] == "&" || value[0] == "^") {
+        showError(emailInput, 'First letter should not start with special character');
+      } else if (!/^([A-Za-z0-9_\-\.])+\@(?![A-Za-z0-9_\-\.]+\.com\.com)([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(value)) {
+        showError(emailInput, 'Email is invalid');
+      } else {
+        hideError(emailInput);
+      }
+    }
+
+    function validatePassword() {
+      const value = passwordInput.value.trim();
+      if (value === '') {
+        showError(passwordInput, 'Password is required');
+      } else if (!/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@£$%^&*]).{8,20}/.test(value)) {
+        showError(passwordInput, 'password must be eight characters including one uppercase letter, one special character and alphanumeric characters');
+      } else if (value.length < 8) {
+        showError(passwordInput, 'Password must be at least 8 characters long');
+      } else {
+        hideError(passwordInput);
+      }
+    }
+    function showpass() {
+      var show = document.getElementById('password');
+      if (show.type == 'password') {
+        show.type = 'text'
+      } else {
+        show.type = 'password'
+      }
+    }
+
+    function validatecPassword() {
+      const value = passwordInput.value.trim();
+      if (value === '') {
+        showError(cpasswordInput, 'comfirm Password is required');
+      } else if (cpasswordInput.value != passwordInput.value) {
+        showError(cpasswordInput, 'Password is not match');
+      } else {
+        hideError(cpasswordInput);
+      }
+    }
+
+    function validateNumber() {
+      const value = numberInput.value.trim();
+      if (value === '') {
+        showError(numberInput, 'Number is required');
+      } else if (isNaN(value)) {
+        showError(numberInput, 'only digits are allowed');
+      } else if (value.length < 10) {
+        showError(numberInput, 'Number should be in 10 to 12 digits');
+      } else if (value.length > 12) {
+        showError(numberInput, 'Number should be in 10 to 12 digits');
+      } else {
+        hideError(numberInput);
+      }
+    }
+    function validateAbout() {
+      const value = aboutInput.value.trim();
+      if (value === '') {
+        showError(aboutInput, 'about yourself is required');
+      } else if (!/^(?:\b\w{1,15}\b\s*)+$/.test(value)) {
+        showError(aboutInput, 'Text invalid');
+      } else if (value > 300) {
+        showError(aboutInput, 'only 300 words are allowed');
+      } else {
+        hideError(aboutInput);
+      }
+    }
+    
+     
+    </script>
+</body>
+</html>
+<!-- function capFirst(str) {
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(capFirst('hello'));
+//output 
+//Hello -->
+
+<!-- for 1st capital and and other small
+const regex = /^[A-Z][a-z]*(?: [A-Z][a-z]*)*$/; -->
+<!-- ^[A-Z][a-z]*(?: [A-Z][a-z]*)*$
+^ Start of string
+[A-Z][a-z]* Match a single uppercase char and optional lowercase chars
+(?: [A-Z][a-z]*)* Optionally repeat matching a space and the same as the previous
+$ End of string
+This pattern is limiter to characters A-Z as the first characters and followed by lowercase characters where there can be a mere space in between the "words".
+
+
+$.validator.addMethod("characters", function(value,element)
+    {
+        return this.optional(element) || /^[a-zA-Z.*\s]*$/i.test(value);
+    }, "Only Characters are Allowed !!");
+    
+    $.validator.addMethod("dot", function(value,element)
+    {
+        return this.optional(element) || /^[^.]*$/i.test(value);
+    }, "Dot chatarcters are not Allowed !!");
+    
+    $.validator.addMethod("only_space", function(value,element)
+    {
+        return this.optional(element) || /^[.*\S.*]/i.test(value);
+    }, "Only Spaces are not Allowed !!"); 
+
+    $.validator.addMethod("first_letter", function(value,element)
+    {
+        return this.optional(element) || ^[A-Z][a-z]*(?: [A-Z][a-z]*)*$/ i.test(value);
+    }, "First Letter Should be Capital !!");    // your answer , if i am using it as it is then also its not working and other validations above it are also not working.
+
+$.validator.addMethod("characters", function(value,element)
+    {
+        return this.optional(element) || /^[A-Z][a-zA-Z.*\s] (?: [A-Z][a-z]*)*$/i.test(value);
+    }, "Only Characters are Allowed !!");    // what i tried 
+
+$.validator.addMethod("first_letter", function(value,element)
+    {
+        return this.optional(element) || /^([A-Z] [a-z] * (([A-Za-z]\s)?[a-z]*)*)(\s+\S+\s*)*$/i.test(value);
+    }, "First Letter Should be Capital !!");    // I also tried like this. -->
